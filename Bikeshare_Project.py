@@ -26,10 +26,7 @@ def get_filters():
     while city not in CITY_DATA.keys():
         print("\nWelcome to the Bikeshare Data Program! Please choose your city:")
         print("\n1. Chicago  2. New York City  3. Washington")
-        print("\nAllowable input as follows:\nCity's full name; not case sensitive.\nCity's full name in Title form (Chicago)")
-
-        # This code will take the input and make it all lower case
-        city = input().lower()
+        city = input("\nAllowable input as follows:\nCity's full name; not case sensitive.\nCity's full name in Title form (Chicago)").lower()
 
         if city not in CITY_DATA.keys():
             print("\nInput not valid. Please re-enter city name using the allowable formats")
