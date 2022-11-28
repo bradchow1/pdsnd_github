@@ -122,12 +122,12 @@ def time_stats(df):
     print('\nSearhcing for the most frequent times of travel...\n')
     start_time = time.time()
 
-    # This code uses the mode method to search for the most popular month
+    # This code uses .mode() to calculate the most popular month
     popular_month = df['month'].mode()[0]
 
     print(f"The Most Popular Month is (with 1 = January,...,6 = June): {popular_month}")
 
-    # This code uses the mode method to search for the most popular day
+    # This code uses .mode() to calculate the most popular day
     popular_day = df['day_of_week'].mode()[0]
 
     print(f"\nThe Most Popular Day is: {popular_day}")
@@ -135,7 +135,7 @@ def time_stats(df):
     # This code will extract the hour from the 'Start Time' column to create an hour column
     df['hour'] = df['Start Time'].dt.hour
 
-    # This code uses the mode method to search for the most popular hour
+    # This code uses .mode() to calculate the most popular hour
     popular_hour = df['hour'].mode()[0]
 
     print(f"\nThe Most Popular Start Hour is: {popular_hour}")
@@ -161,7 +161,7 @@ def station_stats(df):
 
     print(f"The Most Commonly Used Start Station is: {common_start_station}")
 
-    # This code uses the mode method to search the most common end station
+    # This code uses .mode() to calculate the most common end station
     common_end_station = df['End Station'].mode()[0]
 
     print(f"\nThe most commonly used end station: {common_end_station}")
