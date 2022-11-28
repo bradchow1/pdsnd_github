@@ -40,8 +40,7 @@ def get_filters():
     while month not in MONTH_DATA.keys():
         print("\nPlease input the month you want to see, from January to June, for which you're seeking the data:")
         print("\nAllowable input as follows:\nFull month name; not case sensitive.\nMonth's full name in Title form (April).")
-        print("\nIf you wish to veiw all months, please type 'all' using the above allowable inputs.)")
-        month = input().lower()
+        month = input("\nIf you wish to veiw all months, please type 'all' using the above allowable inputs.)").lower()
 
         if month not in MONTH_DATA.keys():
             print("\nInput not valid. Please re-enter desired monthly data using the allowable formats")
